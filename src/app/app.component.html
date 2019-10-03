@@ -1,0 +1,27 @@
+<div>
+  <label for="Fname">first name: </label>
+  <input type="text" name="Fname" [(ngModel)]="name">
+  <p>{{ name }}</p>
+  <button (click)="restName()" [disabled]="checkName()">Rest Name</button>
+</div>
+<br>
+<h3 [ngStyle]="{color: getColor()}" >example of ngStyle</h3>
+<h4 [ngClass]="{white: flag}" >example of ngClass</h4>
+<p *ngIf="flag; else elseblock" >flag is true</p>
+<ng-template #elseblock>
+  <p>flag is false</p>
+</ng-template> 
+  
+<button (click)="toggleFlag()" >Toggle flag</button>  
+
+<br>
+<h2>Student Roster</h2>
+
+  <input type="text" placeholder="name" [(ngModel)]="current">
+<button (click)="submitName()" >Submit Student Name</button> 
+<li *ngFor="let names of studentRoster">{{names}} </li> 
+
+<hr>
+<button (click)="toggleDisplay()" >Toggle Display</button> 
+<p *ngIf='toggle === true'> a real looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo ng paragraph</p>
+<p *ngFor="let clicks of counter" [ngStyle]="{color: getLength()}">{{clicks}}</p>
