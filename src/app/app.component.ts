@@ -16,7 +16,6 @@ export class AppComponent {
   toggleDisplay(){
     this.toggle = !this.toggle;
     this.counter.push(this.counter.length +1);
-
   }
   getLength(){
     if (this.counter.length > 4){
